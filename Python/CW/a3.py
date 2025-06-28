@@ -1,32 +1,12 @@
-from abc import ABC, abstractmethod
-class Animal(ABC):
-    def move(self):
-        pass
+file = open('Codingal.txt', 'r')
+Counter = 0
 
-class Human(Animal):
-    def move(self):
-        print("I can walk and run")
+Content = file.read()
+CoList = Content.split("\n")
 
-class Snake(Animal):
-    def move(self):
-        print("I can crawl")
+for i in CoList:
+    if i:
+            Counter += 1
 
-class Dog(Animal):
-    def move(self):
-        print("I can Bark")
-
-class Lion(Animal):
-    def move(self):
-        print("I can roar")
-
-R = Human()
-R.move()
-
-K = Snake()
-K.move()
-
-R = Dog()
-R.move()
-
-H = Lion()
-H.move()
+print("This is the number of lines in the file")
+print(Counter)

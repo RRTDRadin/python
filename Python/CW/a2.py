@@ -1,15 +1,12 @@
-class Person:
-    def __init__(self, fname, lname):
-        self.firstname = fname
-        self.lastname = lname
-
-    def printname(self):
-        print(self.firstname, self.lastname)
-class Student(Person):
-    def __init__(self, fname, lname, year):
-        super().__init__(fname, lname)
-        self.graduationyear = year
-
-x = Student("Joey", "King", 2021)
-x.printname()
-print(x.graduationyear)
+file_read = open('Codingal.txt','r')
+print("File in Read Mode -")
+print(file_read.read())
+file_read.close()
+file_write = open('Codingal.txt', 'w')
+file_write.write("File in wright mode ....")
+file_write.write("Hi! I am Penguin. I am 1 year old.")
+file_read.close()
+file_append = open('Codingal.txt', 'a')
+file_append.write("\n File in append mode ....")
+file_append.write("Hi! I am Penguin. I am 1 year old.")
+file_append.close()
