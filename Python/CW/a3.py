@@ -1,12 +1,12 @@
-file = open('Codingal.txt', 'r')
-Counter = 0
+file1 = open('CodingalUpdated.txt','w')
 
-Content = file.read()
-CoList = Content.split("\n")
+file2 = open ('CodingalUpdated.txt','w')
 
-for i in CoList:
-    if i:
-            Counter += 1
+for line in file1.readline():
+    if not (line.staryswith('Coding')):
+        print(line)
 
-print("This is the number of lines in the file")
-print(Counter)
+file2.write(line)
+
+file2.close()
+file1.close()
