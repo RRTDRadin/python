@@ -1,12 +1,11 @@
-file = open('Codingal.txt', 'r')
-print(file.read())
+with open('Codingal.txt','w') as file:
+    file.write("Hi! I am Penguin and I am 1 years old.")
 file.close()
 
-file = open('Codingal.txt', 'r')
-print("\n Read in parts \n")
-print(file.read(8))
-file.close()
-
-file = open('Codingal.txt', 'a')
-print("Hi! I am Penguin and I am 1 uears old")
+with open('Codingal.txt', 'r') as file:
+    data = file.readline()
+    print("Words in this file are.......")
+    for line in data:
+        word = line.split()
+        print(word)
 file.close()

@@ -1,17 +1,17 @@
-file = open('Codingal.txt', 'r')
-print("Read First line...")
-print(file.readline())
-file.close()
+new_file = open('New_File.txt', 'x')
+new_file.close()
 
-file = open('Codingal.txt', 'r')
-print("Reading multiple lines...")
-print(file.readline())
-print(file.readline())
-print(file.readline())
-file.close()
+import os
+print("Checking If my file exist or not.......")
+if os.path.exists("my_file.txt"):
+    os.remove("my_file.txt")
+else:
+    print("The file does not exist")
 
-file = open('Codingal.txt', 'r')
-print("Looping through the lines...")
-for line in file:
-    print(line)
-file.close()
+my_file = open('my_file.txt', 'w')
+my_file.write("Hi! I am Penguin and I am 1 years old.")
+my_file.close()
+
+os.remove('Codingal.txt')
+
+os.rmdir('Folder')
