@@ -1,19 +1,17 @@
 from tkinter import *
+from PIL import Image, ImageTk
 
-window = Tk()
-window.title('Tkinter Sample Window')
-window.geometry('300x300')
+root = Tk()
+root.title('image')
+root.geometry('400x400')
 
-greeting = Label(text="Hello User", fg='black', bg='white')
-button = Button(text="Click me", fg='black', bg='white')
-entry = Entry(fg='yellow', bg='blue', width=50)
-greeting.pack()
-button.pack()
-entry.pack()
+upload = Image.open("img.jpg")
 
-frame = Frame(master=window, relief=RAISED, borderwith=5)
-frame.pack()
-lable = Label(master=frame, text='Sample Frame')
+image = ImageTk.PhotoImage(upload)
 
-textbox = Text(fg='green',bg='yellow')
-textbox.pack()
+label = Label(root, image=image, height=350, width=300)
+label.place(x=50, y=0)
+label2 = Label(root, text="This is how you add image in Tkinter Window")
+label2.place(x=40, y=360)
+
+root.mainloop()
