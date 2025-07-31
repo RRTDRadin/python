@@ -1,21 +1,7 @@
-from tkinter import *
-
-root = Tk()
-root.geometry('400x400')
-root.title("main")
-
-def topwin():
-    top = Toplevel()
-    top.geometry("180x100")
-    top.title("toplevel")
-
-    l2 = Label(top, text = "This is toplevel window")
-    l2.pack()
-
-    top.mainloop()
-
-l = Label(root, text = "This is root window")
-btn = Button(root, text = "Click here to open another window", command = topwin)
-
-l.pack()
-btn.pack()
+def fun3(n):
+    sum=0
+    for i in range(1,n+1):
+        for j in range(1,n+1):
+            sum+=1
+            return sum
+print(fun3(4))
